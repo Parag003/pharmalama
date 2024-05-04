@@ -9,6 +9,7 @@ export default function SideButton(props) {
   }
   return (
     <button
+      {...props}
       className={`${inter.className}   focus:border focus:border-solid focus:border-white hover:translate-x-1 transition ease-in-out delay-75 w-16 lg:w-64 h-16 lg:h-16 flex justify-center items-center gap-3 rounded-md  pl-1`}
     >
       <props.icon size={64} />

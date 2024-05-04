@@ -13,10 +13,12 @@ import {
   TableRow,
 } from "flowbite-react";
 import Link from "next/link";
+import LoginSwitch from "./loginswitch";
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-4 bg-white min-h-screen  ">
+      <LoginSwitch />
       <div className="flex flex-row">
         <div className="">
           <div className="flex flex-col flex-wrap  gap-4 p-8">
