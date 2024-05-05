@@ -49,6 +49,41 @@ export default function Inventory() {
     router.push("/");
   };
 
+  const handleAddMedicine = async (e) => {
+    e.preventDefault();
+    console.log("fsjljs dkf jl");
+    const med1 = e.target["med1"].value;
+    const num = e.target["number-input"].value;
+    try {
+      // const data = new FormData(e);
+      // console.log(data);
+      const response = await fetch("http://172.31.219.169:8000/cart/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${getCookie("data")}`,
+        },
+        body: JSON.stringify({
+          pharmacy_name: "Gupta Pharmacy",
+          items: [
+            {
+              name: med1,
+              quantity: num,
+            },
+          ],
+        }),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        // Handle success response
+      } else {
+        throw new Error("Failed to add medicine");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="flex flex-col gap-4 ">
       <LoginSwitch />
@@ -65,12 +100,21 @@ export default function Inventory() {
           <Button onClick={() => setOpenModal(true)}>Add Medicine </Button>
           <Modal show={openModal} onClose={() => setOpenModal(false)}>
             <Modal.Body>
-              <form className="flex  flex-col gap-4 justify-center items-center shadow-sm shadow-cyan-700 p-2">
+              <form
+                onSubmit={handleAddMedicine}
+                className="flex  flex-col gap-4 justify-center items-center shadow-sm shadow-cyan-700 p-2"
+              >
                 <div>
                   <div className="mb-2 block">
                     <Label htmlFor="email1" value="Medicine Name" />
                   </div>
-                  <TextInput id="med1" placeholder="dolo-650" required />
+                  <input
+                    aria-describedby="helper-text-explanation"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    id="med1"
+                    placeholder="dolo-650"
+                    required
+                  />
                 </div>
                 <div>
                   <div className="mb-2 block">
@@ -86,6 +130,9 @@ export default function Inventory() {
                   />
                 </div>
                 <Button type="submit">Submit</Button>
+                <Button type="button" onClick={() => setOpenModal(false)}>
+                  Close
+                </Button>
               </form>
             </Modal.Body>
           </Modal>

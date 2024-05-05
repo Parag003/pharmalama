@@ -23,7 +23,7 @@ export default function Home() {
         <div className="">
           <div className="flex flex-col flex-wrap  gap-4 p-8">
             <Link href="/inventory">
-              <Card className="w-80 justify-center items-center">
+              <Card className="w-96 h-96 justify-center items-center">
                 <img
                   src="./inventory.png"
                   className="w-auto "
@@ -34,18 +34,7 @@ export default function Home() {
                 </h5>
               </Card>
             </Link>
-            <Link href="/inventory">
-              <Card className="w-80 justify-center items-center">
-                <img
-                  src="./checklist.png"
-                  className="w-auto "
-                  alt="Flowbite React Logo"
-                />
-                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
-                  Inventory
-                </h5>
-              </Card>
-            </Link>
+            <Link href="/inventory"></Link>
           </div>
         </div>
 
@@ -54,20 +43,16 @@ export default function Home() {
           <div className=" w-[68rem] overflow-x-auto">
             <Table striped>
               <TableHead>
-                <TableHeadCell>Product name</TableHeadCell>
-                <TableHeadCell>Color</TableHeadCell>
-                <TableHeadCell>Category</TableHeadCell>
-                <TableHeadCell>Price</TableHeadCell>
+                <TableHeadCell>Medicine name</TableHeadCell>
+
                 <TableHeadCell>Status</TableHeadCell>
               </TableHead>
               <TableBody className="divide-y">
                 <TableRow className="bg-white dark:border-gray-700 dark:bg-gray-800">
                   <TableCell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                    {'Apple MacBook Pro 17"'}
+                    list 0
                   </TableCell>
-                  <TableCell>Sliver</TableCell>
-                  <TableCell>Laptop</TableCell>
-                  <TableCell>$2999</TableCell>
+
                   <TableCell>
                     <label>
                       <input type="checkbox" />
@@ -76,11 +61,9 @@ export default function Home() {
                 </TableRow>
                 <TableRow className="bg-white dark:border-gray-700 dark:bg-gray-800">
                   <TableCell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                    Microsoft Surface Pro
+                    list 1
                   </TableCell>
-                  <TableCell>White</TableCell>
-                  <TableCell>Laptop PC</TableCell>
-                  <TableCell>$1999</TableCell>
+
                   <TableCell>
                     <label>
                       <input type="checkbox" />
@@ -89,11 +72,9 @@ export default function Home() {
                 </TableRow>
                 <TableRow className="bg-white dark:border-gray-700 dark:bg-gray-800">
                   <TableCell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                    Magic Mouse 2
+                    list 2
                   </TableCell>
-                  <TableCell>Black</TableCell>
-                  <TableCell>Accessories</TableCell>
-                  <TableCell>$99</TableCell>
+
                   <TableCell>
                     <label>
                       <input type="checkbox" />
@@ -102,11 +83,9 @@ export default function Home() {
                 </TableRow>
                 <TableRow className="bg-white dark:border-gray-700 dark:bg-gray-800">
                   <TableCell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                    Google Pixel Phone
+                    list 3
                   </TableCell>
-                  <TableCell>Gray</TableCell>
-                  <TableCell>Phone</TableCell>
-                  <TableCell>$799</TableCell>
+
                   <TableCell>
                     <label>
                       <input type="checkbox" />
@@ -115,11 +94,9 @@ export default function Home() {
                 </TableRow>
                 <TableRow className="bg-white dark:border-gray-700 dark:bg-gray-800">
                   <TableCell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                    Apple Watch 5
+                    list 4
                   </TableCell>
-                  <TableCell>Red</TableCell>
-                  <TableCell>Wearables</TableCell>
-                  <TableCell>$999</TableCell>
+
                   <TableCell>
                     <label>
                       <input type="checkbox" />
@@ -128,11 +105,9 @@ export default function Home() {
                 </TableRow>
                 <TableRow className="bg-white dark:border-gray-700 dark:bg-gray-800">
                   <TableCell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                    Apple Watch 5
+                    list 5
                   </TableCell>
-                  <TableCell>Red</TableCell>
-                  <TableCell>Wearables</TableCell>
-                  <TableCell>$999</TableCell>
+
                   <TableCell>
                     <label>
                       <input type="checkbox" />
