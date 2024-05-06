@@ -30,7 +30,7 @@ export default function Navbarc() {
           alt="Flowbite React Logo"
         />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-          Flowbite React
+          Pharmassist
         </span>
       </NavbarBrand>
       <div className="flex md:order-2">
